@@ -1,0 +1,10 @@
+python
+torch
+openai-whisper
+gtts
+moviepy
+numpy
+pysoundfile
+imageio
+pillow
+ffmpeg-python
