@@ -98,8 +98,8 @@ This will:
 ---
 
 ## 🔧 Troubleshooting
-## 🔍 Issue: **1️⃣ FFmpeg Not Found**
-
+### **1️⃣ FFmpeg Not Found**
+#### 🔍 Issue: FFmpeg does not recognize 
 - Add FFmpeg to System PATH:
 1. Open Environment Variables:
 2. Press Win + R, type sysdm.cpl, and hit Enter.
@@ -117,8 +117,8 @@ This will:
 
 ---
 
-## 🔍 Issue: FFmpeg is installed and working in Command Prompt (cmd), but not in the VS Code terminal.
-### Solution: Add FFmpeg Path to VS Code Environment
+#### 🔍 Issue: FFmpeg is installed and working in Command Prompt (cmd), but not in the VS Code terminal.
+###### Solution: Add FFmpeg Path to VS Code Environment
 
 - Manually Add FFmpeg Path in VS Code: 
 1. Open **VS Code**.
