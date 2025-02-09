@@ -9,7 +9,7 @@ This project enables users to:
 ## 🚀 Features
 - **Automatic Speech Recognition (ASR)**: Converts spoken content from audio/video into text.
 - **Text-to-Speech (TTS)**: Generates male and female voices from the text.
-- **Video Generation**: Combines generated speech with an image to create a video.
+- **Video Generation**: Combines generated speech with an image to create a video. (on working)
 
 ---
 
@@ -95,13 +95,46 @@ This will:
 - Use OpenAI Whisper to transcribe them.
 - Save transcriptions in the `transcript_file/` folder.
 
+---
 
 ## 🔧 Troubleshooting
-### **1️⃣ FFmpeg Not Found**
-If FFmpeg is not recognized:
-- Add it to your system PATH.
-- Restart your terminal after installation.
+## 🔍 Issue: **1️⃣ FFmpeg Not Found**
 
+- Add FFmpeg to System PATH:
+1. Open Environment Variables:
+2. Press Win + R, type sysdm.cpl, and hit Enter.
+3. Go to the Advanced tab → Click Environment Variables.
+4. Find the "Path" Variable:
+5. In System Variables, scroll down to Path → Click Edit.
+6. Click New, then add this path:
+```json
+{
+    C:\ffmpeg_location/bin
+}
+``` 
+7. Click OK and close all windows.
+8. Restart your terminal after installation.
+
+---
+
+## 🔍 Issue: FFmpeg is installed and working in Command Prompt (cmd), but not in the VS Code terminal.
+### Solution: Add FFmpeg Path to VS Code Environment
+
+- Manually Add FFmpeg Path in VS Code: 
+1. Open **VS Code**.
+2. Go to **Settings** by pressing `Ctrl + Shift + P`.
+3. Search for `terminal.integrated.env.windows` in the search bar.
+4. Click on **Edit in settings.json** to modify the configuration.
+5. Add the following lines inside the JSON file:
+
+```json
+{
+    "terminal.integrated.env.windows": {
+        "Path": "C:\\ffmpeg\\bin;${env:Path}"
+    }
+}
+``` 
+---
 ### **2️⃣ Missing Dependencies**
 Run:
 ```bash
