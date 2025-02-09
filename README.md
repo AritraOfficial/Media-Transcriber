@@ -23,15 +23,22 @@ project-folder/
 │── requirements.txt          # Dependencies list
 │── README.md                 # Project documentation
 ```
-
+## 📊 Data Sources  
+This project utilizes diverse audio and video data from multiple sources:  
+- **Kaggle Dataset**: Pre-existing audio datasets from Kaggle.  
+- **Self-Recorded Videos**: Custom video recordings for personalized content.  
+- **YouTube Videos**: Extracted audio and video for transcription and analysis.  
+- **AI-Generated Videos**: Videos generated using artificial intelligence tools.  
+- **Text-to-Speech (TTS) Audio**: Synthetic audio generated via TTS for experimentation.
 ---
 
 ## 🛠️ Installation Guide
 ### 1️⃣ **Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/yourrepository.git
-cd yourrepository
+git clone https://github.com/AritraOfficial/Media-Transcriber.git
+cd Media-Transcriber
 ```
+
 
 ### 2️⃣ **Set Up a Virtual Environment (Optional but Recommended)**
 ```bash
@@ -54,7 +61,7 @@ FFmpeg is required for processing audio/video. Install it from:
   brew install ffmpeg      # macOS (Homebrew)
   ```
 
-Ensure FFmpeg is added to your system `PATH`:
+## Ensure FFmpeg is added to your system `PATH`:
 ```bash
 ffmpeg -version  # Check if FFmpeg is correctly installed
 ```
@@ -62,22 +69,14 @@ ffmpeg -version  # Check if FFmpeg is correctly installed
 ---
 
 ## 🏃‍♂️ Usage
-### **1️⃣ Run the Transcription Script**
-```bash
-python project_file.py
-```
-This will:
-- Scan `test_media/` for audio/video files.
-- Use OpenAI Whisper to transcribe them.
-- Save transcriptions in the `output/` folder.
 
-### **2️⃣ Generate Speech from Text (Male & Female Voice)**
+### **1️⃣ Generate Speech from Text (Male & Female Voice)**
 Modify the script to choose between male or female voice.
 ```bash
-python text_to_speech.py
+python audio.py
 ```
 
-### **3️⃣ Generate Video with Background Image and Voice**
+### **2️⃣ Generate Video with Background Image and Voice**
 ```bash
 python video.py
 ```
@@ -86,6 +85,16 @@ This will:
 - Create a video file with the generated audio.
 
 ---
+
+### **3️⃣ Run the Transcription Script**
+```bash
+python project_file.py
+```
+This will:
+- Scan `data_file/` for audio/video files.
+- Use OpenAI Whisper to transcribe them.
+- Save transcriptions in the `transcript_file/` folder.
+
 
 ## 🔧 Troubleshooting
 ### **1️⃣ FFmpeg Not Found**
@@ -98,28 +107,6 @@ Run:
 ```bash
 pip install -r requirements.txt
 ```
-
----
-
-## 📜 Requirements.txt
-Here are all required dependencies for the project:
-```
-torch
-openai-whisper
-gtts
-moviepy
-numpy
-pysoundfile
-imageio
-pillow
-ffmpeg-python
-```
-Install them using:
-```bash
-pip install -r requirements.txt
-```
-
----
 
 ## 📜 License
 This project is open-source and available under the [MIT License](LICENSE).
@@ -134,5 +121,5 @@ This project is open-source and available under the [MIT License](LICENSE).
 ---
 
 ## 📞 Contact
-For issues or contributions, create a GitHub issue or reach out at [your-email@example.com](mailto:your-email@example.com).
+For issues or contributions, create a GitHub issue or reach out at [Gmail](mailto:aritra.work.official@gmail.com).
 
